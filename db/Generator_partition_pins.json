@@ -1,0 +1,229 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "outputLED1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED5[4]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED5[5]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED5[6]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED6[0]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED6[1]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED6[2]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED6[3]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED6[4]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED6[5]",
+					"strict" : false
+				},
+				{
+					"name" : "outputLED6[6]",
+					"strict" : false
+				},
+				{
+					"name" : "outputSignal",
+					"strict" : false
+				},
+				{
+					"name" : "periodEnd",
+					"strict" : false
+				},
+				{
+					"name" : "inputBinaryLevel[9]",
+					"strict" : false
+				},
+				{
+					"name" : "inputBinaryLevel[8]",
+					"strict" : false
+				},
+				{
+					"name" : "inputBinaryLevel[7]",
+					"strict" : false
+				},
+				{
+					"name" : "inputBinaryLevel[6]",
+					"strict" : false
+				},
+				{
+					"name" : "inputBinaryLevel[5]",
+					"strict" : false
+				},
+				{
+					"name" : "inputBinaryLevel[4]",
+					"strict" : false
+				},
+				{
+					"name" : "inputBinaryLevel[3]",
+					"strict" : false
+				},
+				{
+					"name" : "inputBinaryLevel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "inputBinaryLevel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "inputBinaryLevel[2]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

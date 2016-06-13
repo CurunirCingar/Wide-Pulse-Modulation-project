@@ -1,0 +1,60 @@
+-- Quartus II VHDL Template
+-- Four-State Moore State Machine
+
+-- A Moore machine's outputs are dependent only on the current state.
+-- The output is written only when the state changes.  (State
+-- transitions are synchronous.)
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Generator is
+
+	port(
+		clk		 : in	std_logic;
+		inputBinaryLevel	 : in	std_logic_vector(7 downto 0);
+		outputSignal	 : out	std_logic
+	);
+
+end entity;
+
+architecture WidePulseGenerator of Generator is
+
+	signal inputLevel   : integer;
+
+begin
+
+	-- Logic to advance to the next state
+	process (clk, reset)
+	variable levelCounter : integer := 0;
+	variable inputLevel : integer := 0;
+	begin
+		
+		if(levelCounter < 256) then
+			levelCounter := levelCounter + 1;
+		end if;
+		
+		if(levelCounter < inputLevel) then
+			outputSignal <= '1';
+		else
+			outputSignal <= '0';
+		end if;
+		
+	end process;
+
+	-- Output depends solely on the current state
+	process (state)
+	begin
+		case state is
+			when s0 =>
+				output <= "00";
+			when s1 =>
+				output <= "01";
+			when s2 =>
+				output <= "10";
+			when s3 =>
+				output <= "11";
+		end case;
+	end process;
+
+end rtl;

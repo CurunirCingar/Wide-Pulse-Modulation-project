@@ -1,0 +1,88 @@
+m255
+K3
+z0
+13
+cModel Technology
+Z0 dD:\Gen\simulation\qsim
+vGenerator
+Z1 !s110 1464766791
+!i10b 1
+!s100 0]VE]k4ka`_L^T<@6lTi;1
+I2L0Oh8V;UPG8g<[4WPkV30
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/Curunir/Desktop/PLD/Gen/simulation/qsim
+w1464766787
+8Generator.vo
+FGenerator.vo
+L0 32
+Z4 OV;L;10.4d;61
+r1
+!s85 0
+31
+!s108 1464766788.000000
+!s107 Generator.vo|
+!s90 -work|work|Generator.vo|
+!i113 1
+Z5 o-work work
+n@generator
+vGenerator_vlg_check_tst
+!i10b 1
+!s100 ?]:F4K[QT@Uz5iD>3HZVK1
+IDhiAgW]]Rlf]5MnLeM`H^0
+Vlj;lEU5SGNHcdZVm>1liP3
+R0
+Z6 w1464718753
+Z7 8Waveform7.vwf.vt
+Z8 FWaveform7.vwf.vt
+L0 59
+Z9 OV;L;10.1d;51
+r1
+!s85 0
+31
+Z10 !s108 1464718762.140000
+Z11 !s107 Waveform7.vwf.vt|
+Z12 !s90 -work|work|Waveform7.vwf.vt|
+!s101 -O0
+Z13 o-work work -O0
+n@generator_vlg_check_tst
+vGenerator_vlg_sample_tst
+!i10b 1
+!s100 L`1?jK=7[fjXeDV42VJmT3
+IVML]SBAM[3SAl[6Vbz7Me2
+VVdjb=ILg:FLOd2BC]i1X]3
+R0
+R6
+R7
+R8
+L0 29
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!s101 -O0
+R13
+n@generator_vlg_sample_tst
+vGenerator_vlg_vec_tst
+R1
+!i10b 1
+!s100 a=j[cE[RMaDhVH35;3hkT0
+I9346:PQ_QjbbInanH=@WI0
+R2
+R3
+w1464766783
+8Waveform12.vwf.vt
+FWaveform12.vwf.vt
+L0 30
+R4
+r1
+!s85 0
+31
+!s108 1464766791.000000
+!s107 Waveform12.vwf.vt|
+!s90 -work|work|Waveform12.vwf.vt|
+!i113 1
+R5
+n@generator_vlg_vec_tst

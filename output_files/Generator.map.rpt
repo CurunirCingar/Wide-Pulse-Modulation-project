@@ -1,0 +1,838 @@
+Analysis & Synthesis report for Generator
+Fri Jun 03 19:43:19 2016
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Parameter Settings for Inferred Entity Instance: ComponentGenerator:GEN|lpm_divide:Div5
+ 12. Parameter Settings for Inferred Entity Instance: ComponentGenerator:GEN|lpm_divide:Mod0
+ 13. Parameter Settings for Inferred Entity Instance: ComponentGenerator:GEN|lpm_divide:Div0
+ 14. Parameter Settings for Inferred Entity Instance: ComponentGenerator:GEN|lpm_divide:Mod1
+ 15. Parameter Settings for Inferred Entity Instance: ComponentGenerator:GEN|lpm_divide:Div1
+ 16. Parameter Settings for Inferred Entity Instance: ComponentGenerator:GEN|lpm_divide:Mod2
+ 17. Parameter Settings for Inferred Entity Instance: ComponentGenerator:GEN|lpm_divide:Div2
+ 18. Parameter Settings for Inferred Entity Instance: ComponentGenerator:GEN|lpm_divide:Mod3
+ 19. Parameter Settings for Inferred Entity Instance: ComponentGenerator:GEN|lpm_divide:Div3
+ 20. Parameter Settings for Inferred Entity Instance: ComponentGenerator:GEN|lpm_divide:Mod4
+ 21. Parameter Settings for Inferred Entity Instance: ComponentGenerator:GEN|lpm_divide:Div4
+ 22. Parameter Settings for Inferred Entity Instance: ComponentGenerator:GEN|lpm_divide:Mod5
+ 23. Port Connectivity Checks: "ComponentGenerator:GEN"
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Jun 03 19:43:19 2016       ;
+; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
+; Revision Name                   ; Generator                                   ;
+; Top-level Entity Name           ; Generator                                   ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 100                                         ;
+; Total pins                      ; 55                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 1                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; Generator          ; Generator          ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
+; Generator.vhd                    ; yes             ; User VHDL File               ; C:/Users/Curunir/Desktop/PLD/Gen0/Generator.vhd                         ;         ;
+; ComponentGenerator.vhd           ; yes             ; User VHDL File               ; C:/Users/Curunir/Desktop/PLD/Gen0/ComponentGenerator.vhd                ;         ;
+; ComponentNumLEDIndicator.vhd     ; yes             ; User VHDL File               ; C:/Users/Curunir/Desktop/PLD/Gen0/ComponentNumLEDIndicator.vhd          ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera_lite/16.0/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera_lite/16.0/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera_lite/16.0/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal160.inc                   ; yes             ; Megafunction                 ; c:/altera_lite/16.0/quartus/libraries/megafunctions/aglobal160.inc      ;         ;
+; db/lpm_divide_2dm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_divide_2dm.tdf                 ;         ;
+; db/sign_div_unsign_8nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/sign_div_unsign_8nh.tdf            ;         ;
+; db/alt_u_div_m2f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/alt_u_div_m2f.tdf                  ;         ;
+; db/lpm_divide_75m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_divide_75m.tdf                 ;         ;
+; db/sign_div_unsign_anh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/sign_div_unsign_anh.tdf            ;         ;
+; db/alt_u_div_q2f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/alt_u_div_q2f.tdf                  ;         ;
+; db/lpm_divide_bpo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_divide_bpo.tdf                 ;         ;
+; db/abs_divider_kbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/abs_divider_kbg.tdf                ;         ;
+; db/alt_u_div_ove.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/alt_u_div_ove.tdf                  ;         ;
+; db/lpm_abs_kn9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_abs_kn9.tdf                    ;         ;
+; db/lpm_abs_4p9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_abs_4p9.tdf                    ;         ;
+; db/lpm_divide_epo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_divide_epo.tdf                 ;         ;
+; db/abs_divider_nbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/abs_divider_nbg.tdf                ;         ;
+; db/alt_u_div_uve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/alt_u_div_uve.tdf                  ;         ;
+; db/lpm_abs_nn9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_abs_nn9.tdf                    ;         ;
+; db/lpm_divide_oqo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_divide_oqo.tdf                 ;         ;
+; db/abs_divider_1dg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/abs_divider_1dg.tdf                ;         ;
+; db/alt_u_div_i2f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/alt_u_div_i2f.tdf                  ;         ;
+; db/lpm_abs_1p9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_abs_1p9.tdf                    ;         ;
+; db/lpm_divide_sqo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_divide_sqo.tdf                 ;         ;
+; db/abs_divider_5dg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/abs_divider_5dg.tdf                ;         ;
+; db/alt_u_div_r2f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/alt_u_div_r2f.tdf                  ;         ;
+; db/lpm_abs_5p9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_abs_5p9.tdf                    ;         ;
+; db/lpm_divide_vqo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_divide_vqo.tdf                 ;         ;
+; db/abs_divider_8dg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/abs_divider_8dg.tdf                ;         ;
+; db/alt_u_div_03f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/alt_u_div_03f.tdf                  ;         ;
+; db/lpm_abs_8p9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_abs_8p9.tdf                    ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                      ;
++---------------------------------------------+------------------------------------+
+; Resource                                    ; Usage                              ;
++---------------------------------------------+------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 4562                               ;
+;                                             ;                                    ;
+; Combinational ALUT usage for logic          ; 8984                               ;
+;     -- 7 input functions                    ; 0                                  ;
+;     -- 6 input functions                    ; 129                                ;
+;     -- 5 input functions                    ; 125                                ;
+;     -- 4 input functions                    ; 2485                               ;
+;     -- <=3 input functions                  ; 6245                               ;
+;                                             ;                                    ;
+; Dedicated logic registers                   ; 100                                ;
+;                                             ;                                    ;
+; I/O pins                                    ; 55                                 ;
+;                                             ;                                    ;
+; Total DSP Blocks                            ; 1                                  ;
+;                                             ;                                    ;
+; Maximum fan-out node                        ; ComponentGenerator:GEN|LessThan0~6 ;
+; Maximum fan-out                             ; 100                                ;
+; Total fan-out                               ; 28536                              ;
+; Average fan-out                             ; 3.10                               ;
++---------------------------------------------+------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                          ;
++-------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                               ; Entity Name         ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |Generator                                ; 8984 (1)          ; 100 (0)      ; 0                 ; 1          ; 55   ; 0            ; |Generator                                                                                                                        ; Generator           ; work         ;
+;    |ComponentGenerator:GEN|               ; 8941 (1073)       ; 100 (100)    ; 0                 ; 1          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN                                                                                                 ; ComponentGenerator  ; work         ;
+;       |lpm_divide:Div0|                   ; 87 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_bpo:auto_generated|  ; 87 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Div0|lpm_divide_bpo:auto_generated                                                   ; lpm_divide_bpo      ; work         ;
+;             |abs_divider_kbg:divider|     ; 87 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Div0|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                           ; abs_divider_kbg     ; work         ;
+;                |alt_u_div_ove:divider|    ; 87 (87)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Div0|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider     ; alt_u_div_ove       ; work         ;
+;       |lpm_divide:Div1|                   ; 104 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_epo:auto_generated|  ; 104 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Div1|lpm_divide_epo:auto_generated                                                   ; lpm_divide_epo      ; work         ;
+;             |abs_divider_nbg:divider|     ; 104 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Div1|lpm_divide_epo:auto_generated|abs_divider_nbg:divider                           ; abs_divider_nbg     ; work         ;
+;                |alt_u_div_uve:divider|    ; 104 (104)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Div1|lpm_divide_epo:auto_generated|abs_divider_nbg:divider|alt_u_div_uve:divider     ; alt_u_div_uve       ; work         ;
+;       |lpm_divide:Div2|                   ; 110 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Div2                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_oqo:auto_generated|  ; 110 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Div2|lpm_divide_oqo:auto_generated                                                   ; lpm_divide_oqo      ; work         ;
+;             |abs_divider_1dg:divider|     ; 110 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Div2|lpm_divide_oqo:auto_generated|abs_divider_1dg:divider                           ; abs_divider_1dg     ; work         ;
+;                |alt_u_div_i2f:divider|    ; 110 (110)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Div2|lpm_divide_oqo:auto_generated|abs_divider_1dg:divider|alt_u_div_i2f:divider     ; alt_u_div_i2f       ; work         ;
+;       |lpm_divide:Div3|                   ; 104 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Div3                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_sqo:auto_generated|  ; 104 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Div3|lpm_divide_sqo:auto_generated                                                   ; lpm_divide_sqo      ; work         ;
+;             |abs_divider_5dg:divider|     ; 104 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Div3|lpm_divide_sqo:auto_generated|abs_divider_5dg:divider                           ; abs_divider_5dg     ; work         ;
+;                |alt_u_div_r2f:divider|    ; 104 (104)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Div3|lpm_divide_sqo:auto_generated|abs_divider_5dg:divider|alt_u_div_r2f:divider     ; alt_u_div_r2f       ; work         ;
+;       |lpm_divide:Div4|                   ; 76 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Div4                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_vqo:auto_generated|  ; 76 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Div4|lpm_divide_vqo:auto_generated                                                   ; lpm_divide_vqo      ; work         ;
+;             |abs_divider_8dg:divider|     ; 76 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Div4|lpm_divide_vqo:auto_generated|abs_divider_8dg:divider                           ; abs_divider_8dg     ; work         ;
+;                |alt_u_div_03f:divider|    ; 76 (76)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Div4|lpm_divide_vqo:auto_generated|abs_divider_8dg:divider|alt_u_div_03f:divider     ; alt_u_div_03f       ; work         ;
+;       |lpm_divide:Div5|                   ; 185 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Div5                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_2dm:auto_generated|  ; 185 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Div5|lpm_divide_2dm:auto_generated                                                   ; lpm_divide_2dm      ; work         ;
+;             |sign_div_unsign_8nh:divider| ; 185 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Div5|lpm_divide_2dm:auto_generated|sign_div_unsign_8nh:divider                       ; sign_div_unsign_8nh ; work         ;
+;                |alt_u_div_m2f:divider|    ; 185 (185)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Div5|lpm_divide_2dm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_m2f:divider ; alt_u_div_m2f       ; work         ;
+;       |lpm_divide:Mod0|                   ; 332 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_75m:auto_generated|  ; 332 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Mod0|lpm_divide_75m:auto_generated                                                   ; lpm_divide_75m      ; work         ;
+;             |sign_div_unsign_anh:divider| ; 332 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Mod0|lpm_divide_75m:auto_generated|sign_div_unsign_anh:divider                       ; sign_div_unsign_anh ; work         ;
+;                |alt_u_div_q2f:divider|    ; 332 (332)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Mod0|lpm_divide_75m:auto_generated|sign_div_unsign_anh:divider|alt_u_div_q2f:divider ; alt_u_div_q2f       ; work         ;
+;       |lpm_divide:Mod1|                   ; 1374 (0)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_75m:auto_generated|  ; 1374 (0)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Mod1|lpm_divide_75m:auto_generated                                                   ; lpm_divide_75m      ; work         ;
+;             |sign_div_unsign_anh:divider| ; 1374 (0)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Mod1|lpm_divide_75m:auto_generated|sign_div_unsign_anh:divider                       ; sign_div_unsign_anh ; work         ;
+;                |alt_u_div_q2f:divider|    ; 1374 (1374)       ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Mod1|lpm_divide_75m:auto_generated|sign_div_unsign_anh:divider|alt_u_div_q2f:divider ; alt_u_div_q2f       ; work         ;
+;       |lpm_divide:Mod2|                   ; 1374 (0)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Mod2                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_75m:auto_generated|  ; 1374 (0)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Mod2|lpm_divide_75m:auto_generated                                                   ; lpm_divide_75m      ; work         ;
+;             |sign_div_unsign_anh:divider| ; 1374 (0)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Mod2|lpm_divide_75m:auto_generated|sign_div_unsign_anh:divider                       ; sign_div_unsign_anh ; work         ;
+;                |alt_u_div_q2f:divider|    ; 1374 (1374)       ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Mod2|lpm_divide_75m:auto_generated|sign_div_unsign_anh:divider|alt_u_div_q2f:divider ; alt_u_div_q2f       ; work         ;
+;       |lpm_divide:Mod3|                   ; 1374 (0)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Mod3                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_75m:auto_generated|  ; 1374 (0)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Mod3|lpm_divide_75m:auto_generated                                                   ; lpm_divide_75m      ; work         ;
+;             |sign_div_unsign_anh:divider| ; 1374 (0)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Mod3|lpm_divide_75m:auto_generated|sign_div_unsign_anh:divider                       ; sign_div_unsign_anh ; work         ;
+;                |alt_u_div_q2f:divider|    ; 1374 (1374)       ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Mod3|lpm_divide_75m:auto_generated|sign_div_unsign_anh:divider|alt_u_div_q2f:divider ; alt_u_div_q2f       ; work         ;
+;       |lpm_divide:Mod4|                   ; 1374 (0)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Mod4                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_75m:auto_generated|  ; 1374 (0)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Mod4|lpm_divide_75m:auto_generated                                                   ; lpm_divide_75m      ; work         ;
+;             |sign_div_unsign_anh:divider| ; 1374 (0)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Mod4|lpm_divide_75m:auto_generated|sign_div_unsign_anh:divider                       ; sign_div_unsign_anh ; work         ;
+;                |alt_u_div_q2f:divider|    ; 1374 (1374)       ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Mod4|lpm_divide_75m:auto_generated|sign_div_unsign_anh:divider|alt_u_div_q2f:divider ; alt_u_div_q2f       ; work         ;
+;       |lpm_divide:Mod5|                   ; 1374 (0)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Mod5                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_75m:auto_generated|  ; 1374 (0)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Mod5|lpm_divide_75m:auto_generated                                                   ; lpm_divide_75m      ; work         ;
+;             |sign_div_unsign_anh:divider| ; 1374 (0)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Mod5|lpm_divide_75m:auto_generated|sign_div_unsign_anh:divider                       ; sign_div_unsign_anh ; work         ;
+;                |alt_u_div_q2f:divider|    ; 1374 (1374)       ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|ComponentGenerator:GEN|lpm_divide:Mod5|lpm_divide_75m:auto_generated|sign_div_unsign_anh:divider|alt_u_div_q2f:divider ; alt_u_div_q2f       ; work         ;
+;    |NumLEDIndicator:LED1|                 ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|NumLEDIndicator:LED1                                                                                                   ; NumLEDIndicator     ; work         ;
+;    |NumLEDIndicator:LED2|                 ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|NumLEDIndicator:LED2                                                                                                   ; NumLEDIndicator     ; work         ;
+;    |NumLEDIndicator:LED3|                 ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|NumLEDIndicator:LED3                                                                                                   ; NumLEDIndicator     ; work         ;
+;    |NumLEDIndicator:LED4|                 ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|NumLEDIndicator:LED4                                                                                                   ; NumLEDIndicator     ; work         ;
+;    |NumLEDIndicator:LED5|                 ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|NumLEDIndicator:LED5                                                                                                   ; NumLEDIndicator     ; work         ;
+;    |NumLEDIndicator:LED6|                 ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Generator|NumLEDIndicator:LED6                                                                                                   ; NumLEDIndicator     ; work         ;
++-------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary  ;
++---------------------------------+-------------+
+; Statistic                       ; Number Used ;
++---------------------------------+-------------+
+; Two Independent 18x18           ; 1           ;
+; Total number of DSP blocks      ; 1           ;
+;                                 ;             ;
+; Fixed Point Unsigned Multiplier ; 1           ;
++---------------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                            ;
++-------------------------------------------+---------------------------------------------------+
+; Register name                             ; Reason for Removal                                ;
++-------------------------------------------+---------------------------------------------------+
+; ComponentGenerator:GEN|inputLevel[11..31] ; Merged with ComponentGenerator:GEN|inputLevel[10] ;
+; ComponentGenerator:GEN|inputLevel[10]     ; Stuck at GND due to stuck port data_in            ;
+; Total Number of Removed Registers = 22    ;                                                   ;
++-------------------------------------------+---------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 100   ;
+; Number of registers using Synchronous Clear  ; 32    ;
+; Number of registers using Synchronous Load   ; 42    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 68    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ComponentGenerator:GEN|lpm_divide:Div5 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 17             ; Untyped                                       ;
+; LPM_WIDTHD             ; 10             ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_2dm ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ComponentGenerator:GEN|lpm_divide:Mod0 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 33             ; Untyped                                       ;
+; LPM_WIDTHD             ; 32             ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_75m ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ComponentGenerator:GEN|lpm_divide:Div0 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                       ;
+; LPM_WIDTHD             ; 5              ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_bpo ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ComponentGenerator:GEN|lpm_divide:Mod1 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 33             ; Untyped                                       ;
+; LPM_WIDTHD             ; 32             ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_75m ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ComponentGenerator:GEN|lpm_divide:Div1 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                       ;
+; LPM_WIDTHD             ; 8              ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_epo ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ComponentGenerator:GEN|lpm_divide:Mod2 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 33             ; Untyped                                       ;
+; LPM_WIDTHD             ; 32             ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_75m ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ComponentGenerator:GEN|lpm_divide:Div2 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                       ;
+; LPM_WIDTHD             ; 11             ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_oqo ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ComponentGenerator:GEN|lpm_divide:Mod3 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 33             ; Untyped                                       ;
+; LPM_WIDTHD             ; 32             ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_75m ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ComponentGenerator:GEN|lpm_divide:Div3 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                       ;
+; LPM_WIDTHD             ; 15             ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_sqo ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ComponentGenerator:GEN|lpm_divide:Mod4 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 33             ; Untyped                                       ;
+; LPM_WIDTHD             ; 32             ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_75m ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ComponentGenerator:GEN|lpm_divide:Div4 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                       ;
+; LPM_WIDTHD             ; 18             ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_vqo ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ComponentGenerator:GEN|lpm_divide:Mod5 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 33             ; Untyped                                       ;
+; LPM_WIDTHD             ; 32             ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_75m ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ComponentGenerator:GEN"                                                                                                                          ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                      ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; increment ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; decrement ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 100                         ;
+;     ENA               ; 26                          ;
+;     ENA SLD           ; 42                          ;
+;     SCLR              ; 32                          ;
+; arriav_lcell_comb     ; 8990                        ;
+;     arith             ; 4546                        ;
+;         0 data inputs ; 507                         ;
+;         1 data inputs ; 1038                        ;
+;         2 data inputs ; 105                         ;
+;         3 data inputs ; 1524                        ;
+;         4 data inputs ; 1372                        ;
+;     normal            ; 4351                        ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 2503                        ;
+;         3 data inputs ; 474                         ;
+;         4 data inputs ; 1113                        ;
+;         5 data inputs ; 125                         ;
+;         6 data inputs ; 129                         ;
+;     shared            ; 93                          ;
+;         0 data inputs ; 56                          ;
+;         1 data inputs ; 37                          ;
+; arriav_mac            ; 1                           ;
+; boundary_port         ; 55                          ;
+;                       ;                             ;
+; Max LUT depth         ; 132.00                      ;
+; Average LUT depth     ; 120.18                      ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:15     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+    Info: Processing started: Fri Jun 03 19:42:46 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Generator -c Generator
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file generator.vhd
+    Info (12022): Found design unit 1: Generator-GeneratorMainBlockArc File: C:/Users/Curunir/Desktop/PLD/Gen0/Generator.vhd Line: 29
+    Info (12023): Found entity 1: Generator File: C:/Users/Curunir/Desktop/PLD/Gen0/Generator.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file componentgenerator.vhd
+    Info (12022): Found design unit 1: ComponentGenerator-WidePulseGenerator File: C:/Users/Curunir/Desktop/PLD/Gen0/ComponentGenerator.vhd Line: 27
+    Info (12023): Found entity 1: ComponentGenerator File: C:/Users/Curunir/Desktop/PLD/Gen0/ComponentGenerator.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file componentnumledindicator.vhd
+    Info (12022): Found design unit 1: NumLEDIndicator-NumLEDIndicatorArc File: C:/Users/Curunir/Desktop/PLD/Gen0/ComponentNumLEDIndicator.vhd Line: 11
+    Info (12023): Found entity 1: NumLEDIndicator File: C:/Users/Curunir/Desktop/PLD/Gen0/ComponentNumLEDIndicator.vhd Line: 4
+Info (12127): Elaborating entity "Generator" for the top level hierarchy
+Info (12128): Elaborating entity "ComponentGenerator" for hierarchy "ComponentGenerator:GEN" File: C:/Users/Curunir/Desktop/PLD/Gen0/Generator.vhd Line: 61
+Info (12128): Elaborating entity "NumLEDIndicator" for hierarchy "NumLEDIndicator:LED1" File: C:/Users/Curunir/Desktop/PLD/Gen0/Generator.vhd Line: 64
+Info (278001): Inferred 12 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ComponentGenerator:GEN|Div5" File: C:/Users/Curunir/Desktop/PLD/Gen0/ComponentGenerator.vhd Line: 125
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ComponentGenerator:GEN|Mod0" File: C:/Users/Curunir/Desktop/PLD/Gen0/ComponentGenerator.vhd Line: 71
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ComponentGenerator:GEN|Div0" File: c:/altera_lite/16.0/quartus/libraries/vhdl/wysiwyg/twentynm_components.vhd Line: 4169
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ComponentGenerator:GEN|Mod1" File: C:/Users/Curunir/Desktop/PLD/Gen0/ComponentGenerator.vhd Line: 71
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ComponentGenerator:GEN|Div1" File: c:/altera_lite/16.0/quartus/libraries/vhdl/wysiwyg/twentynm_components.vhd Line: 4169
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ComponentGenerator:GEN|Mod2" File: C:/Users/Curunir/Desktop/PLD/Gen0/ComponentGenerator.vhd Line: 71
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ComponentGenerator:GEN|Div2" File: c:/altera_lite/16.0/quartus/libraries/vhdl/wysiwyg/twentynm_components.vhd Line: 4169
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ComponentGenerator:GEN|Mod3" File: C:/Users/Curunir/Desktop/PLD/Gen0/ComponentGenerator.vhd Line: 71
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ComponentGenerator:GEN|Div3" File: c:/altera_lite/16.0/quartus/libraries/vhdl/wysiwyg/twentynm_components.vhd Line: 4169
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ComponentGenerator:GEN|Mod4" File: C:/Users/Curunir/Desktop/PLD/Gen0/ComponentGenerator.vhd Line: 71
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ComponentGenerator:GEN|Div4" File: c:/altera_lite/16.0/quartus/libraries/vhdl/wysiwyg/twentynm_components.vhd Line: 4169
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ComponentGenerator:GEN|Mod5" File: C:/Users/Curunir/Desktop/PLD/Gen0/ComponentGenerator.vhd Line: 71
+Info (12130): Elaborated megafunction instantiation "ComponentGenerator:GEN|lpm_divide:Div5" File: C:/Users/Curunir/Desktop/PLD/Gen0/ComponentGenerator.vhd Line: 125
+Info (12133): Instantiated megafunction "ComponentGenerator:GEN|lpm_divide:Div5" with the following parameter: File: C:/Users/Curunir/Desktop/PLD/Gen0/ComponentGenerator.vhd Line: 125
+    Info (12134): Parameter "LPM_WIDTHN" = "17"
+    Info (12134): Parameter "LPM_WIDTHD" = "10"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_2dm.tdf
+    Info (12023): Found entity 1: lpm_divide_2dm File: C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_divide_2dm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_8nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_8nh File: C:/Users/Curunir/Desktop/PLD/Gen0/db/sign_div_unsign_8nh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_m2f.tdf
+    Info (12023): Found entity 1: alt_u_div_m2f File: C:/Users/Curunir/Desktop/PLD/Gen0/db/alt_u_div_m2f.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "ComponentGenerator:GEN|lpm_divide:Mod0" File: C:/Users/Curunir/Desktop/PLD/Gen0/ComponentGenerator.vhd Line: 71
+Info (12133): Instantiated megafunction "ComponentGenerator:GEN|lpm_divide:Mod0" with the following parameter: File: C:/Users/Curunir/Desktop/PLD/Gen0/ComponentGenerator.vhd Line: 71
+    Info (12134): Parameter "LPM_WIDTHN" = "33"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_75m.tdf
+    Info (12023): Found entity 1: lpm_divide_75m File: C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_divide_75m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_anh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_anh File: C:/Users/Curunir/Desktop/PLD/Gen0/db/sign_div_unsign_anh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_q2f.tdf
+    Info (12023): Found entity 1: alt_u_div_q2f File: C:/Users/Curunir/Desktop/PLD/Gen0/db/alt_u_div_q2f.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "ComponentGenerator:GEN|lpm_divide:Div0" File: c:/altera_lite/16.0/quartus/libraries/vhdl/wysiwyg/twentynm_components.vhd Line: 4169
+Info (12133): Instantiated megafunction "ComponentGenerator:GEN|lpm_divide:Div0" with the following parameter: File: c:/altera_lite/16.0/quartus/libraries/vhdl/wysiwyg/twentynm_components.vhd Line: 4169
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_bpo.tdf
+    Info (12023): Found entity 1: lpm_divide_bpo File: C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_divide_bpo.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_kbg.tdf
+    Info (12023): Found entity 1: abs_divider_kbg File: C:/Users/Curunir/Desktop/PLD/Gen0/db/abs_divider_kbg.tdf Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ove.tdf
+    Info (12023): Found entity 1: alt_u_div_ove File: C:/Users/Curunir/Desktop/PLD/Gen0/db/alt_u_div_ove.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_kn9.tdf
+    Info (12023): Found entity 1: lpm_abs_kn9 File: C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_abs_kn9.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_4p9.tdf
+    Info (12023): Found entity 1: lpm_abs_4p9 File: C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_abs_4p9.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "ComponentGenerator:GEN|lpm_divide:Mod1" File: C:/Users/Curunir/Desktop/PLD/Gen0/ComponentGenerator.vhd Line: 71
+Info (12133): Instantiated megafunction "ComponentGenerator:GEN|lpm_divide:Mod1" with the following parameter: File: C:/Users/Curunir/Desktop/PLD/Gen0/ComponentGenerator.vhd Line: 71
+    Info (12134): Parameter "LPM_WIDTHN" = "33"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12130): Elaborated megafunction instantiation "ComponentGenerator:GEN|lpm_divide:Div1" File: c:/altera_lite/16.0/quartus/libraries/vhdl/wysiwyg/twentynm_components.vhd Line: 4169
+Info (12133): Instantiated megafunction "ComponentGenerator:GEN|lpm_divide:Div1" with the following parameter: File: c:/altera_lite/16.0/quartus/libraries/vhdl/wysiwyg/twentynm_components.vhd Line: 4169
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "8"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_epo.tdf
+    Info (12023): Found entity 1: lpm_divide_epo File: C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_divide_epo.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_nbg.tdf
+    Info (12023): Found entity 1: abs_divider_nbg File: C:/Users/Curunir/Desktop/PLD/Gen0/db/abs_divider_nbg.tdf Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_uve.tdf
+    Info (12023): Found entity 1: alt_u_div_uve File: C:/Users/Curunir/Desktop/PLD/Gen0/db/alt_u_div_uve.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_nn9.tdf
+    Info (12023): Found entity 1: lpm_abs_nn9 File: C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_abs_nn9.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "ComponentGenerator:GEN|lpm_divide:Div2" File: c:/altera_lite/16.0/quartus/libraries/vhdl/wysiwyg/twentynm_components.vhd Line: 4169
+Info (12133): Instantiated megafunction "ComponentGenerator:GEN|lpm_divide:Div2" with the following parameter: File: c:/altera_lite/16.0/quartus/libraries/vhdl/wysiwyg/twentynm_components.vhd Line: 4169
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "11"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_oqo.tdf
+    Info (12023): Found entity 1: lpm_divide_oqo File: C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_divide_oqo.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_1dg.tdf
+    Info (12023): Found entity 1: abs_divider_1dg File: C:/Users/Curunir/Desktop/PLD/Gen0/db/abs_divider_1dg.tdf Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_i2f.tdf
+    Info (12023): Found entity 1: alt_u_div_i2f File: C:/Users/Curunir/Desktop/PLD/Gen0/db/alt_u_div_i2f.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_1p9.tdf
+    Info (12023): Found entity 1: lpm_abs_1p9 File: C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_abs_1p9.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "ComponentGenerator:GEN|lpm_divide:Div3" File: c:/altera_lite/16.0/quartus/libraries/vhdl/wysiwyg/twentynm_components.vhd Line: 4169
+Info (12133): Instantiated megafunction "ComponentGenerator:GEN|lpm_divide:Div3" with the following parameter: File: c:/altera_lite/16.0/quartus/libraries/vhdl/wysiwyg/twentynm_components.vhd Line: 4169
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "15"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_sqo.tdf
+    Info (12023): Found entity 1: lpm_divide_sqo File: C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_divide_sqo.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_5dg.tdf
+    Info (12023): Found entity 1: abs_divider_5dg File: C:/Users/Curunir/Desktop/PLD/Gen0/db/abs_divider_5dg.tdf Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_r2f.tdf
+    Info (12023): Found entity 1: alt_u_div_r2f File: C:/Users/Curunir/Desktop/PLD/Gen0/db/alt_u_div_r2f.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_5p9.tdf
+    Info (12023): Found entity 1: lpm_abs_5p9 File: C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_abs_5p9.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "ComponentGenerator:GEN|lpm_divide:Div4" File: c:/altera_lite/16.0/quartus/libraries/vhdl/wysiwyg/twentynm_components.vhd Line: 4169
+Info (12133): Instantiated megafunction "ComponentGenerator:GEN|lpm_divide:Div4" with the following parameter: File: c:/altera_lite/16.0/quartus/libraries/vhdl/wysiwyg/twentynm_components.vhd Line: 4169
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "18"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_vqo.tdf
+    Info (12023): Found entity 1: lpm_divide_vqo File: C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_divide_vqo.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_8dg.tdf
+    Info (12023): Found entity 1: abs_divider_8dg File: C:/Users/Curunir/Desktop/PLD/Gen0/db/abs_divider_8dg.tdf Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_03f.tdf
+    Info (12023): Found entity 1: alt_u_div_03f File: C:/Users/Curunir/Desktop/PLD/Gen0/db/alt_u_div_03f.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_8p9.tdf
+    Info (12023): Found entity 1: lpm_abs_8p9 File: C:/Users/Curunir/Desktop/PLD/Gen0/db/lpm_abs_8p9.tdf Line: 23
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 9083 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 44 output pins
+    Info (21061): Implemented 9027 logic cells
+    Info (21062): Implemented 1 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 1050 megabytes
+    Info: Processing ended: Fri Jun 03 19:43:19 2016
+    Info: Elapsed time: 00:00:33
+    Info: Total CPU time (on all processors): 00:00:54
+
+

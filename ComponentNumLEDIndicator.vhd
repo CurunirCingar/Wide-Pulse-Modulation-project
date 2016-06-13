@@ -1,0 +1,30 @@
+library ieee;
+use ieee.std_logic_1164.all;
+-------------------------------NumLEDIndicator entity-------------------------
+	entity NumLEDIndicator is
+		port(
+			num :		in std_logic_vector(3 downto 0);
+			outputBinaryNum: out std_logic_vector(6 downto 0)
+		);
+	end entity;
+-------------------------------NumLEDIndicatorArc architecture-------------------------
+	architecture NumLEDIndicatorArc of NumLEDIndicator is
+
+	begin
+		process (num)
+		begin			
+			case num is
+				when "0000" => outputBinaryNum <= "1000000";
+				when "0001" => outputBinaryNum <= "1111001";
+				when "0010" => outputBinaryNum <= "0100100";
+				when "0011" => outputBinaryNum <= "0110000";
+				when "0100" => outputBinaryNum <= "0011001";
+				when "0101" => outputBinaryNum <= "0010010";
+				when "0110" => outputBinaryNum <= "0000010";
+				when "0111" => outputBinaryNum <= "1111000";
+				when "1000" => outputBinaryNum <= "0000000";
+				when "1001" => outputBinaryNum <= "0010000";
+				when others => outputBinaryNum <= "1111111";
+			end case;
+		end process;
+	end NumLEDIndicatorArc;
